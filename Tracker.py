@@ -17,9 +17,6 @@ def clearline():
 def sleep(t):
     time.sleep(t)
 
-def newline():
-    print("\n", end="\b")
-
 def play_fancy_animation(animation, t, end):
     if (end == -1):
         end = len(animation)
@@ -41,11 +38,9 @@ def apply_encryption_effect(s, t=0.01, end=10):
         animation.append(id_generator(len(s)))
             
     animation.append(clearline())
-    animation.append(s)
+    animation.append(s + "\n \b")
         
     play_fancy_animation(animation, t, -1)
-
-    newline()
 
 def write_to_file(s):
     f = open(file, "a")
