@@ -173,9 +173,9 @@ while inp != "x":
     inp = ask_for_data()
     
     # Preview output
-    print("> Output will be: ")
+    print("\n" + "> Output will be: ")
     v = get_format_from_data(inp)
-    print(v + "\n")
+    print(v)
 
     # Second confirmation
     print("> Are you sure? y/n")
